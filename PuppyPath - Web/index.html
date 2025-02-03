@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuppyPath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            padding: 30px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #222;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #B45F06;
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://images.alphacoders.com/134/1341825.png') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 30px;
+            background: #B45F06;
+            color: white;
+            font-size: 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #8A4504;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 40px;
+            color: #B45F06;
+            margin-bottom: 30px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: white;
+            color: #444;
+            padding: 40px;
+            margin-top: 80px;
+            border-top: 2px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap.
+        }
+
+        .footer-left {
+            text-align: left.
+            flex: 1.
+        }
+
+        .footer-left p {
+            margin-bottom: 10px.
+            font-size: 18px.
+        }
+
+        .footer-right {
+            text-align: right.
+            flex: 1.
+        }
+
+        .footer-right p {
+            margin-bottom: 10px.
+            font-size: 18px.
+        }
+
+        .footer-right img {
+            width: 150px.
+        }
+
+        @media (max-width: 600px) {
+            .footer-left, .footer-right {
+                flex: 100%.
+                text-align: center.
+            }
+
+            .footer-right {
+                margin-top: 20px.
+            }
+        }
+
+        #audio-control {
+            position: fixed.
+            bottom: 20px.
+            right: 20px.
+            background-color: #B45F06.
+            border-radius: 20px.
+            padding: 10px 20px.
+            color: white.
+            font-size: 16px.
+            cursor: pointer.
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🐾 PuppyPath</div>
+        <nav>
+            <a href="#adopt-section">Inicio</a>
+            <a href="#adopt-section">Adoptar</a>
+            <a href="#services">Servicios</a>
+            <a href="#store">Tienda</a>
+            <a href="login.html">Iniciar Sesión</a>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Adopta con confianza</h1>
+            <p>Conéctate con refugios certificados, accede a servicios veterinarios y encuentra los mejores productos para tu mascota.</p>
+            <a href="#adopt-section" class="btn">Saber más</a>
+        </div>
+    </div>
+
+    <div id="adopt-section" class="section">
+        <h2>Adopta un Animal</h2>
+        <p>Encuentra a tu compañero ideal entre cientos de mascotas en busca de hogar. En PuppyPath queremos que encuentres al amigo perfecto para ti. Ofrecemos un proceso de adopción sencillo y eficiente, conectándote con refugios de confianza para que puedas darle un hogar lleno de amor a una mascota necesitada. <a href="https://mascotasadopcion.com/">LINK</a></p>
+    </div>
+
+    <div id="services" class="section">
+        <h2>Servicios de Paseo y Cuidado</h2>
+        <p>Ofrecemos servicios de paseo y cuidado para que tu mascota se mantenga activa y saludable. Reserva paseos diarios con nuestros paseadores de confianza y permite que nuestros entrenadores certificados ayuden a tu mascota a mejorar su comportamiento.  <a href="https://vivofacil.com/es/cuidado-y-paseo-de-animales.html">LINK</a></p>
+    </div>
+
+    <div id="store" class="section">
+        <h2>Tienda de Productos</h2>
+        <p>Encuentra todo lo que necesitas para el bienestar de tu mascota en nuestra tienda. Desde alimentos premium adaptados a sus necesidades hasta juguetes y accesorios diseñados para su comodidad y diversión. Todo en un solo lugar para que tu mascota esté siempre feliz. <a href="tienda.html">LINK</a></p>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-left">
+            <p><a href="https://guns.lol/whatisnet_">Mis redes sociales</a></p>
+        </div>
+        <div class="footer-right">
+            <p>Descarga la Aplicación</p>
+            <a href="https://play.google.com/store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Store">
+            </a>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="dogs.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <div id="audio-control" onclick="toggleMusic()">🎵 Música de Fondo</div>
+    
+    <script>
+        var music = document.getElementById("background-music");
+        
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                document.getElementById("audio-control").textContent = "🔇 Detener Música";
+            } else {
+                music.pause();
+                document.getElementById("audio-control").textContent = "🎵 Música de Fondo";
+            }
+        }
+        
+        window.onload = function() {
+            music.play();
+        }
+    </script>
+</body>
+</html>

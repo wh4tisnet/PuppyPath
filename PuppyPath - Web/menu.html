@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #3f4bb4;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo span {
+            margin-left: 10px;
+        }
+
+        header .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        header .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        /* Menú de navegación de servicios */
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .services {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h2 {
+            margin-bottom: 20px;
+            color: #3f4bb4;
+        }
+
+        .service-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.02);
+        }
+
+        .service-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .service-card h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .service-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .profile-details {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-details h2 {
+            margin-bottom: 20px;
+            color: #3f4bb4;
+        }
+
+        .profile-details img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+            border: 3px solid #3f4bb4;
+        }
+
+        .profile-details p {
+            margin: 10px 0;
+            color: #555;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #3f4bb4;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">🐾</a><span>Servicio de paseo</span>
+        </div>
+        <!-- Menú de navegación -->
+        <nav>
+            <a href="adoptar.html">Adoptar</a>
+            <a href="menu.html">Servicios</a>
+            <a href="tienda.html">Tienda</a>
+        </nav>
+        <div class="profile">
+            <img src="https://th.bing.com/th/id/R.df756a251a62d8fb09b9cf66711c1c09?rik=SKtoKItSIRDsqQ&riu=http%3a%2f%2fcms.softindustries.com%2fmultimedia%2f12%2f200808%2fBichon-maltes_1_2.jpg&ehk=Gd8ncrL%2ffQ5KRPk3D5iiXPywZz1Ih8YwBHfkzAM8z8E%3d&risl=&pid=ImgRaw&r=0" alt="Perfil">
+            <span>adminperritos</span>
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <h2>Servicios Disponibles</h2>
+            <div class="service-card">
+                <a href="https://www.facebook.com/public/Juan-Perez-Garc%C3%ADa/" target="_blank">
+                    <img src="https://th.bing.com/th/id/OIP.9AUNzIXVd2tmlU_4YfjxLAHaE8?rs=1&pid=ImgDetMain" alt="Juan Pérez">
+                </a>
+                <div>
+                    <h3>Servicio de Paseo de Perros</h3>
+                    <p>Cuidador: Juan Pérez</p>
+                    <p>Precio: $10/hora</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <a href="https://www.facebook.com/public/Maria-Perfil/" target="_blank">
+                    <img src="https://th.bing.com/th/id/R.92e855e15454b7c29b25da313eab2e70?rik=fGiNszuQ4sBH1g&riu=http%3a%2f%2fcdn.sheknows.com%2farticles%2f2014%2f06%2fMike_C%2fSheKnows_US%2f1039483%2fWoman-kissing-dog.jpg&ehk=pc1tBNHsxtPtjWbJfx61PrqXA7D3wk929a3D3%2bBG1P0%3d&risl=&pid=ImgRaw&r=0" alt="María López">
+                </a>
+                <div>
+                    <h3>Cuidado en Casa</h3>
+                    <p>Cuidador: María López</p>
+                    <p>Precio: $15/hora</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <a href="https://www.facebook.com/carlows.carlows.3/" target="_blank">
+                    <img src="https://th.bing.com/th/id/OIP.AGTK5uqScUPC2RWb9_C8HgHaE7?rs=1&pid=ImgDetMain" alt="Carlos García">
+                </a>
+                <div>
+                    <h3>Adiestramiento Básico</h3>
+                    <p>Cuidador: Carlos García</p>
+                    <p>Precio: $20/sesión</p>
+                </div>
+            </div>
+        </section>
+        <aside class="profile-details">
+            <img src="https://th.bing.com/th/id/R.df756a251a62d8fb09b9cf66711c1c09?rik=SKtoKItSIRDsqQ&riu=http%3a%2f%2fcms.softindustries.com%2fmultimedia%2f12%2f200808%2fBichon-maltes_1_2.jpg&ehk=Gd8ncrL%2ffQ5KRPk3D5iiXPywZz1Ih8YwBHfkzAM8z8E%3d&risl=&pid=ImgRaw&r=0" alt="Perfil">
+            <h2>Mi Perfil</h2>
+            <p><strong>Nombre:</strong> adminperritos</p>
+            <p><strong>Correo:</strong> perros@gmail.com</p>
+            <p><strong>Teléfono:</strong> 456565443</p>
+            <p><strong>Experiencia:</strong> 5 años cuidando mascotas</p>
+        </aside>
+    </main>
+</body>
+</html>

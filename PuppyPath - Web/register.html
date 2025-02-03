@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body {
+            background: url('https://source.unsplash.com/1600x900/?dog') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #B45F06;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #B45F06;
+            font-family: 'Playfair Display', serif;
+        }
+
+        input, button, select, textarea {
+            width: calc(100% - 20px);
+            margin: 8px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input, select, textarea {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        button {
+            background-color: #B45F06;
+            color: white;
+            cursor: pointer;
+            border: 2px solid #B45F06;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #B45F06;
+        }
+
+        .role-selection {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .role-selection button {
+            width: 48%;
+        }
+
+        .extra-info {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .extra-info a {
+            color: #B45F06;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+    <script>
+        function redirectToConfirmation() {
+            window.location.href = "account-creada.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="registro">
+        <div class="logo">🐾</div>
+        <h2>Registro</h2>
+        <input type="text" placeholder="Nombre">
+        <input type="text" placeholder="Apellidos">
+        <select>
+            <option value="">Sexo</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+        </select>
+        <input type="number" placeholder="Edad" min="1" max="120">
+        <input type="text" placeholder="Teléfono">
+        <input type="email" placeholder="Correo Electrónico">
+        <input type="password" placeholder="Contraseña">
+        <input type="password" placeholder="Confirmar Contraseña">
+        <textarea placeholder="Experiencia (opcional)" rows="4"></textarea>
+        <button onclick="redirectToConfirmation()">¡Registrarse!</button>
+        <div class="extra-info">
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        </div>
+    </div>
+</body>
+</html>

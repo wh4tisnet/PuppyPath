@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuppyPath - Tienda de Productos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #222;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 25px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #B45F06;
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://images7.alphacoders.com/135/1350355.png') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #B45F06;
+            color: white;
+            font-size: 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #8A4504;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            color: #B45F06;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            color: #B45F06;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 18px;
+            color: #B45F06;
+            margin-bottom: 10px;
+        }
+
+        .product-card .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: white;
+            color: #444;
+            padding: 20px 40px;
+            margin-top: 80px;
+            border-top: 2px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-left {
+            text-align: left;
+            flex: 1;
+        }
+
+        .footer-left p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-right {
+            text-align: right;
+            flex: 1;
+        }
+
+        .footer-right p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-right img {
+            width: 130px;
+        }
+
+        @media (max-width: 600px) {
+            .footer-left, .footer-right {
+                flex: 100%;
+                text-align: center;
+            }
+
+            .footer-right {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🐾 PuppyPath</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#adopt-section">Adoptar</a>
+            <a href="#services">Servicios</a>
+            <a href="#store">Tienda</a>
+            <a href="login.html">Iniciar Sesión</a>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Tienda de Productos</h1>
+            <p>Encuentra los mejores productos y alimentos para tu mascota.</p>
+            <a href="#products-section" class="btn">Ver Productos</a>
+        </div>
+    </div>
+
+    <div id="products-section" class="section">
+        <h2>Alimentos y Productos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61AUHO2d+rL._AC_SY300_SX300_.jpg" alt="Alimento para Perros">
+                <h3>Alimento Premium para Perros</h3>
+                <p>Alimento de alta calidad para tu perro, con todos los nutrientes necesarios para su salud y vitalidad.</p>
+                <p class="price">25.99€</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71KAPFYZFDL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Alimento para Gatos">
+                <h3>Alimento Premium para Gatos</h3>
+                <p>Alimento de alta calidad para tu gato, con todos los nutrientes necesarios para su salud y vitalidad.</p>
+                <p class="price">22.99€</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61jkn-mvq6L._AC_SX425_.jpg" alt="Juguetes para Perros">
+                <h3>Juguetes Divertidos para Perros</h3>
+                <p>Juguetes resistentes y seguros para mantener a tu perro entretenido y activo.</p>
+                <p class="price">14.99€</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/611YsXyoEUL._AC_SX425_.jpg" alt="Juguetes para Gatos">
+                <h3>Juguetes Divertidos para Gatos</h3>
+                <p>Juguetes interactivos para mantener a tu gato entretenido y estimulado.</p>
+                <p class="price">12.99€</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71OVM90dX+L._AC_SX425_.jpg" alt="Pelota para Perros">
+                <h3>Pelota Resistente para Perros</h3>
+                <p>Pelota de goma duradera, ideal para juegos de lanzar y recuperar.</p>
+                <p class="price">9.99€</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71Do+2cf5PL._AC_SY300_SX300_.jpg" alt="Pelota para Gatos">
+                <h3>Pelota Interactiva para Gatos</h3>
+                <p>Pelota que estimula la caza y el ejercicio, perfecta para gatos activos.</p>
+                <p class="price">8.99€</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="contact">
+        <div class="footer-left">
+            <p><a href="https://guns.lol/whatisnet_">Mis redes sociales</a></p>
+        </div>
+        <div class="footer-right">
+            <p>Descarga la Aplicación</p>
+            <a href="https://play.google.com/store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Store">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
